@@ -1,0 +1,2 @@
+Name: dialga
+Resets: 4
