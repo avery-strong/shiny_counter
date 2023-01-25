@@ -25,12 +25,12 @@ int main(){
 			getchar();			// eat the new line
 		}
 
-		if((int)userInput == 43) incrementCounter(countStruct);
+		if((int)userInput == 43) incrementCounter(&countStruct);
 		else if((int)userInput == 45){
 			printf("test");
-			decrementCounter(countStruct);
+			decrementCounter(&countStruct);
 
-			if(getCounter(countStruct) < 0) setCounter(countStruct, 0);
+			if(getCounter(countStruct) < 0) setCounter(&countStruct, 0);
 		}
 
 		printf("%d %d\n", getCounter(countStruct), (int)userInput);
