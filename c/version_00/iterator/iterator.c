@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Counter.h"
+#include "C:\Users\aweso\shiny_counter\c\version_00\counter\Counter.h"
 
 int main(){
 	char userInput;
