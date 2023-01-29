@@ -4,7 +4,6 @@
 typedef struct{
 	int softResets;
 	char name[];
-
 }Pokemon;
 
 int getSR(Pokemon p);

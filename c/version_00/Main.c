@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "counter/Counter.h"
 #include "counter/Iterator.h"
@@ -12,9 +13,16 @@ int main(){
 
 	setName(&pokemon);		// Set the name of our pokemon
 
+	char n[sizeof(getName(&pokemon))];
+	strcpy(n, getName(&pokemon));
+
 	setSR(&pokemon, run()); // Run from Iterator.h
 
-	FILE *out_file = fopen(strcat(getName(&pokemon), ".txt"), "w"); 
-	fprintf(out_file, "%s\n%d", getName(&pokemon), getSR(pokemon));
-	fclose(out_file);
+	// File output
+	FILE *fout = fopen("file.txt", "w+");
+
+	if(fout == NULL){}
+	fprintf(fout, "%s\n%d", n, getSR(pokemon));
+	fclose(fout);
+
 }
