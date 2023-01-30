@@ -19,10 +19,9 @@ int main(){
 	setSR(&pokemon, run()); // Run from Iterator.h
 
 	// File output
-	FILE *fout = fopen("file.txt", "w+");
+	FILE *fout = fopen(strcat(getName(&pokwmon), ".txt"), "w+");
 
 	if(fout == NULL){}
 	fprintf(fout, "%s\n%d", n, getSR(pokemon));
 	fclose(fout);
-
 }

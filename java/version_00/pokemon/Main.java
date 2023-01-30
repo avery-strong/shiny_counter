@@ -14,20 +14,18 @@ public class Main{
 
 		System.out.print("Enter the name of the pokemon you're trying to catch: ");
 	
-		String str = in.nextLine();
-
-		Pokemon pokemon = new Pokemon(str);
+		Pokemon pokemon = new Pokemon(in.nextLine());
 		Iterator iterator = new Iterator();
 
 		pokemon.setSR(iterator.run());
 
 		try{
-			File file = new File(str + ".txt");
+			File file = new File(pokemon.getName() + ".txt");
 
 			if(file.createNewFile()) System.out.println("File created: " + file.getName());
       		else 					 System.out.println("File already exists.");
 
-			FileWriter fw = new FileWriter(str + ".txt");
+			FileWriter fw = new FileWriter(pokemon.getName() + ".txt");
 
 			fw.write("Name: " + pokemon.getName() 
 					 + "\nResets: " + pokemon.getSR());

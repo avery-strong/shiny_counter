@@ -18,6 +18,10 @@ public class Pokemon{
 	public void setSR(int sr){ this.softResets = sr; }
 	public void setName(String n){ this.name = n; }
 
+	/**********************
+			Attributes
+	**********************/
+
 	private String name;
 	private int softResets;
 }
