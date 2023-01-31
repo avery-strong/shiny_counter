@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Iterator{
 	public int run(){
-		Scanner in = new Scanner(System.in);
-		char userInput;
+		Scanner in      = new Scanner(System.in);
 		Counter counter = new Counter();
+		
+		char userInput;
 
 		System.out.println("\nEnter + or - to increment or decrement the counter. Press 0 to indicate you have found your shiny.\n");
 		
@@ -33,8 +34,6 @@ public class Iterator{
 				if(counter.getCounter() < 0) counter.setCounter(0);
 			} 
 		}while((int)userInput != 48);
-
-		System.out.println("Congrats!! Looks like you found your mon! And with only " + counter.getCounter() + " tries.");
 
 		return counter.getCounter();
 	}

@@ -1,0 +1,8 @@
+Name: dialga
+Resets: 31
+Name: dialga
+Resets: 2
+Name: dialga
+Resets: 2
+Name: dialga
+Resets: 4

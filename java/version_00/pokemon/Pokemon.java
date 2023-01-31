@@ -1,7 +1,7 @@
 package pokemon;
 
 public class Pokemon{
-	Pokemon(String n){
+	public Pokemon(String n){
 		this.name = n;
 	}
 	/**********************
